@@ -1,0 +1,21 @@
+:host {
+  display: block;
+  height: calc(100% - 64px);
+  width: 280px;
+
+  .wrapper {
+
+    .container {
+      display: flex;
+      flex: 1 1 auto;
+      flex-direction: column;
+      .navigation {
+        flex: 1 1 auto;
+      }
+      .footer {
+        flex: 0 0 auto;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,63 @@
+:host {
+  display: block;
+  height: 64px;
+  border-bottom: 1px solid #dadce0;
+
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+  }
+
+  .wrapper {
+    height: 64px;
+    padding: 8px;
+
+    .container {
+      width: 100%;
+      display: flex;
+      flex: 1 0 auto;
+
+      .left, .center, .right {
+        display: flex;
+        height: 48px;
+        line-height: 48px;
+      }
+
+      .left {
+        flex: 1 0 auto;
+        padding-right: 32px;
+      }
+
+      .center {
+        flex: 1 1 100%;
+      }
+
+      .right {
+        flex: 0 0 auto;
+      }
+    }
+  }
+}
+
+.app-title {
+  font-size: 1.5em;
+  color: grey;
+
+  img {
+    height: 48px;
+    padding-right: 4px;
+    vertical-align: middle;
+  }
+
+  span {
+    display: inline-block;
+    font-size: 22px;
+    line-height: 24px;
+    padding-left: 8px;
+    position: relative;
+    top: -1.5px;
+    vertical-align: middle;
+  }
+}
