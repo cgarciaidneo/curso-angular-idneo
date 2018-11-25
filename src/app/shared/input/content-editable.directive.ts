@@ -21,13 +21,7 @@ export class ContenteditableDirective implements ControlValueAccessor {
   @HostListener('input')
   callOnChange() {
     if (typeof this.onChange === 'function') {
-      if(this.propValueAccessor === 'textContent'){
         this.onChange(this.elementRef.nativeElement[this.propValueAccessor]);
-      }else {
-        let data = this.elementRef.nativeElement[this.propValueAccessor];
-        this.onChange(data.replace(/<div>/g, "\n").replace(/<\/div>/g, "").replace(/<br>/g, "\n"))
-      }
-
     }
   }
 
