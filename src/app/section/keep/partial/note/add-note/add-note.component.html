@@ -1,0 +1,8 @@
+<div *ngIf="!_active" class="wrapper">
+  <div class="textarea">Escribe una nota..</div>
+</div>
+
+<div *ngIf="_active" class="wrapper">
+  <input placeholder="Título" class="title" [(ngModel)]="_note.title">
+  <div #mainTextarea class="textarea" contenteditable="true" propValueAccessor="innerHTML" [(ngModel)]="_note.content">Escribe una nota..</div>
+</div>

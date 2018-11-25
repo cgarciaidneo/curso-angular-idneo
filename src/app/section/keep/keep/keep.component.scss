@@ -23,3 +23,15 @@ $nav-width: 280px;
     }
   }
 }
+
+.note-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  app-note {
+    display: flex;
+    flex: 1 1 0;
+    min-width: 400px;
+    margin: 8px 8px;
+  }
+}

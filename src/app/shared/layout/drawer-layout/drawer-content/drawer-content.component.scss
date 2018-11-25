@@ -5,6 +5,7 @@
   width: 100%;
   left: 0;
   transition: 0.5s;
+  display: block;
   &.open {
     width: calc(100% - 280px);
     left: $nav-width;

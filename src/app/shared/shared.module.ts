@@ -1,15 +1,18 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import {LayoutModule} from "./layout/layout.module";
+import { CommonModule }             from '@angular/common';
+import { NgModule }                 from '@angular/core';
+import { ContenteditableDirective } from './input/content-editable.directive';
+import { LayoutModule }             from "./layout/layout.module";
 
 @NgModule({
-  declarations: [],
+  declarations: [ContenteditableDirective],
   imports: [
     CommonModule,
     LayoutModule
   ],
   exports: [
-    LayoutModule
+    LayoutModule,
+    ContenteditableDirective
   ]
 })
-export class SharedModule { }
+export class SharedModule {
+}

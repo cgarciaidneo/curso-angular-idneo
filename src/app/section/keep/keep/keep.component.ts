@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Title} from "@angular/platform-browser";
-import {ISideNavMenu} from "../partial/navigation/side-nav/side-nav.component";
+import {Title}             from "@angular/platform-browser";
+import { Note }            from "../../../core/object/note";
+import {ISideNavMenu}      from "../partial/navigation/side-nav/side-nav.component";
 
 
 @Component({
@@ -31,13 +32,24 @@ export class KeepComponent implements OnInit {
     }
   ];
 
-  open = true;
+  _noteList: Note<string>[] = [{
+    title: "T1",
+    content: "Content 1"
+  },
+    {
+      title: "T2",
+      content: "Content 2"
+    }];
 
   constructor(private _titleService: Title) {
   }
 
   ngOnInit() {
     this._titleService.setTitle('Idneo Keep');
+  }
+
+  createHandler(note: Note<string>) {
+    this._noteList.push(note);
   }
 
 }
