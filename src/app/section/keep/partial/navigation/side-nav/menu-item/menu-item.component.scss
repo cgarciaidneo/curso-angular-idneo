@@ -1,0 +1,44 @@
+li {
+
+  padding-left: 24px;
+  color: #202124;
+  letter-spacing: .01785714em;
+  font-family: Roboto,Arial,sans-serif;
+  font-size: .875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  display: block;
+  min-height: 40px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+
+  cursor: pointer;
+
+  &.active {
+    background-color: #feefc3;
+    border-radius: 0 25px 25px 0;
+  }
+
+  i.material-icons {
+    line-height: 40px ;
+  }
+
+  span {
+    padding-left: 32px;
+    display: inline-block;
+    line-height: 40px;
+    vertical-align: top;
+    width: 176px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  div.separator {
+    padding: 0 4px;
+    span {
+      height: 0;
+      border-top: 1px solid grey;
+    }
+  }
+}

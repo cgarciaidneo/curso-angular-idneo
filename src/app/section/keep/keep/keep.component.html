@@ -1,2 +1,15 @@
-<app-top-bar></app-top-bar>
-<app-side-nav></app-side-nav>
+<app-top-bar [drawer]="drawer"></app-top-bar>
+
+
+<app-drawer-container>
+  <app-drawer #drawer>
+    <app-side-nav [sideNavMenu]="sideNavMenu"></app-side-nav>
+  </app-drawer>
+
+  <app-drawer-content>
+    <button (click)="drawer.open()">Open</button>
+    <button (click)="drawer.close()">Close</button>
+  </app-drawer-content>
+</app-drawer-container>
+
+

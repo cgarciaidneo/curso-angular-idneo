@@ -1,0 +1,12 @@
+@import "../drawer-layout";
+
+:host {
+  position: relative;
+  width: 100%;
+  left: 0;
+  transition: 0.5s;
+  &.open {
+    width: calc(100% - 280px);
+    left: $nav-width;
+  }
+}

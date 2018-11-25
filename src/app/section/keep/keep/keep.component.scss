@@ -1,0 +1,25 @@
+$nav-width: 280px;
+
+.sidenav-container {
+    height: 100%;
+    position: relative;
+
+  app-side-nav {
+    width: $nav-width;
+    left: -$nav-width;
+    &.open {
+      left: 0;
+    }
+  }
+
+  .content {
+    position: relative;
+    width: 100%;
+    left: 0;
+    transition: 0.5s;
+    &.open {
+      width: calc(100% - 280px);
+      left: $nav-width;
+    }
+  }
+}

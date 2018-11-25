@@ -1,0 +1,7 @@
+@import "../drawer-layout";
+
+:host{
+  height: 100%;
+  position: fixed;
+  transition: 0.5s;
+}

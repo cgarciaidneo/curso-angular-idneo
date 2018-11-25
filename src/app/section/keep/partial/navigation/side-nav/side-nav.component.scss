@@ -1,8 +1,4 @@
 :host {
-  display: block;
-  height: calc(100% - 64px);
-  width: 280px;
-
   .wrapper {
 
     .container {
@@ -11,6 +7,16 @@
       flex-direction: column;
       .navigation {
         flex: 1 1 auto;
+        ul {
+          list-style: none;
+          margin-top: 0;
+          margin-bottom: 0;
+          padding: 8px 0;
+
+          &:not(:last-child){
+            border-bottom: 1px solid #ddd;
+          }
+        }
       }
       .footer {
         flex: 0 0 auto;

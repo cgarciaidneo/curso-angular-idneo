@@ -22,5 +22,7 @@ https://marketplace.visualstudio.com/items?itemName=loiane.angular-extension-pac
 
 Angular Schematics: https://github.com/angular/angular-cli/tree/master/packages/schematics/angular
 
+Sobre los assets: https://github.com/angular/angular-cli/wiki/stories-asset-configuration
+
 
 
