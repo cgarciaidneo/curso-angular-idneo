@@ -1,6 +1,5 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { appRoutes } from './app-routes';
+import { NgModule }     from '@angular/core';
+import { appRoutes }    from './app-routes';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -12,4 +11,5 @@ import { RouterModule } from '@angular/router';
     RouterModule
   ]
 })
-export class AppRouterModule { }
+export class AppRouterModule {
+}

@@ -1,5 +1,4 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule }      from '@angular/core';
 import { ServiceModule } from './service/service.module';
 
 @NgModule({
@@ -8,4 +7,5 @@ import { ServiceModule } from './service/service.module';
     ServiceModule
   ]
 })
-export class CoreModule { }
+export class CoreModule {
+}

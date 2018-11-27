@@ -9,8 +9,8 @@ import { MenuItemComponent }  from './partial/navigation/side-nav/menu-item/menu
 import { SideNavComponent }   from './partial/navigation/side-nav/side-nav.component';
 import { SearchBarComponent } from './partial/navigation/top-bar/search-bar/search-bar.component';
 import { TopBarComponent }    from './partial/navigation/top-bar/top-bar.component';
-import { AddNoteComponent } from './partial/note/add-note/add-note.component';
-import { NoteComponent } from './partial/note/note/note.component';
+import { AddNoteComponent }   from './partial/note/add-note/add-note.component';
+import { NoteComponent }      from './partial/note/note/note.component';
 
 
 @NgModule({
