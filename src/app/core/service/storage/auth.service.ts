@@ -39,7 +39,16 @@ export class AuthService {
   }
 
   isAuth(): Observable<boolean> {
-    return null;
+    return new Observable<boolean>((observer: Observer<boolean>) => {
+      const isAuth = this.mixedStorage.get<boolean>(IS_AUTH);
+      if(!isAuth){
+        observer.error(false);
+        observer.complete();
+      }else{
+        observer.next(true);
+        observer.complete();
+      }
+    })
   }
 
   logout(): Observable<boolean> {
