@@ -1,5 +1,5 @@
-<div class="wrapper">
-  <h2 class="m-16"> Register form </h2>
+<div *ngIf="!success" class="wrapper">
+  <h2  class="m-16"> Register form </h2>
   <form class="p-16" [formGroup]="form" (ngSubmit)="register()">
     <app-input *ngFor="let field of fields"
                [name]="field.name"
@@ -7,6 +7,10 @@
                [type]="field.type"
                [formGroup]="form">
     </app-input>
-    <button [disabled]="!form.valid" type="submit">Send</button>
+    <button class="btn" [disabled]="!form.valid" type="submit">Send</button>
   </form>
+</div>
+
+<div *ngIf="success" class="wrapper">
+  <h2  class="m-16"> Todo fue bien!</h2>
 </div>

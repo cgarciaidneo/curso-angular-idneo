@@ -1,12 +1,13 @@
 import { Component }                     from '@angular/core';
 import { FormGroup, Validators }         from "@angular/forms";
 import { buildFormGroup, Field, IField } from "../../../core/util/forms/forms";
+import { RegisterService }               from "../../../core/service/register.service";
 
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']
+  styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent {
 
@@ -31,9 +32,13 @@ export class RegisterComponent {
 
   form: FormGroup = buildFormGroup(this.fields);
 
+  success: boolean = false;
+
+  constructor(private registerService: RegisterService) {}
+
+
   register() {
-    console.log(this.fields);
-    // this.registerForm.valid
-    console.log(this.form.getRawValue())
+    this.success = true;
+    this.registerService.register(this.form.getRawValue());
   }
 }
