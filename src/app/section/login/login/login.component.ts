@@ -1,6 +1,7 @@
 import { Component, OnInit }             from '@angular/core';
 import { buildFormGroup, Field, IField } from "../../../core/util/forms/forms";
 import { FormGroup, Validators }         from "@angular/forms";
+import { AuthService }                   from "../../../core/service/storage/auth.service";
 
 @Component({
   selector: 'app-login',
@@ -25,12 +26,20 @@ export class LoginComponent implements OnInit {
 
   form: FormGroup = buildFormGroup(this.fields);
 
-  constructor() { }
+  constructor(private auth: AuthService) { }
 
   ngOnInit() {
   }
 
   login(){
+    const rawForm = this.form.getRawValue();
+    this.auth.login(rawForm['email'], rawForm['password'])
+      .subscribe(success => {
+
+      }, err => {
+
+      });
+
     console.log('TO-DO');
   }
 
