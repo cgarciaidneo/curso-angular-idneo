@@ -1,7 +1,8 @@
-import { CommonModule }             from '@angular/common';
-import { NgModule }                 from '@angular/core';
-import { ContenteditableDirective } from "./content-editable.directive";
-import { InputComponent } from './material/input/input.component';
+import { CommonModule }                     from '@angular/common';
+import { NgModule }                         from '@angular/core';
+import { ContenteditableDirective }         from "./content-editable.directive";
+import { InputComponent }                   from './material/input/input.component';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -10,9 +11,12 @@ import { InputComponent } from './material/input/input.component';
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
-    ContenteditableDirective
+    ContenteditableDirective,
+    InputComponent
   ]
 })
 export class InputModule {

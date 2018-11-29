@@ -1,25 +1,26 @@
-$bg-color: #424242;
+$bg-color: #000000;
 $hl-color: #2196F3;
+$error-color: red;
 $muted-color: mix(white, $bg-color, 70%);
 $trans-time: 300ms;
-$width: 320px;
+$width: 100%;
 
 .group {
   position: relative;
-  margin: 45px 0;
+  margin: 32px 0;
 }
 
 input,
 textarea {
   background: none;
   color: $muted-color;
-  font-size: 18px;
-  padding: 10px 10px 10px 5px;
+  font-size: 1em;
+  padding: 10px 10px 10px 5px !important;
   display: block;
   width: $width;
-  border: none;
-  border-radius: 0;
-  border-bottom: 1px solid $muted-color;
+  border: none !important;
+  border-radius: 0 !important;
+  border-bottom: 1px solid $muted-color !important;
   &:focus {
     outline: none;
   }
@@ -53,6 +54,13 @@ label {
   position: relative;
   display: block;
   width: $width;
+
+  &.error {
+    &:before {
+      background: $error-color;
+    }
+  }
+
   &:before {
     content: '';
     height: 2px;
@@ -63,4 +71,9 @@ label {
     transition: $trans-time ease all;
     left: 0;
   }
+}
+
+.hint {
+  margin: 4px;
+  font-size: 0.8em;
 }

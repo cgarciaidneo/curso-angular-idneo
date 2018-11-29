@@ -1,9 +1,34 @@
 @import "fonts";
 @import "reset";
+@import "mixins";
 
 
 * {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
+}
+
+// MARGINS
+$spaceamounts: (4, 8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88); // Adjust this to include the pixel amounts you need.
+$sides: (top, bottom, left, right); // Leave this variable alone
+
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    .m-#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}px !important;
+    }
+
+    .p-#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space}px !important;
+    }
+  }
+
+  .m-#{$space} {
+    margin: #{$space}px !important;
+  }
+
+  .p-#{$space} {
+    padding: #{$space}px !important;
+  }
 }

@@ -4,7 +4,7 @@ import { ServiceModule } from './service/service.module';
 @NgModule({
   declarations: [],
   imports: [
-    ServiceModule
+    ServiceModule,
   ]
 })
 export class CoreModule {

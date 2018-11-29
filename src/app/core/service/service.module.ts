@@ -1,11 +1,13 @@
-import { AppRouterModule } from './app-router/app-router.module';
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { AppRouterModule }  from './app-router/app-router.module';
+import { NgModule }         from '@angular/core';
+import { IdnStorageModule } from "./storage/idn-storage.module";
 
 @NgModule({
   declarations: [],
   imports: [
-    AppRouterModule
+    AppRouterModule,
+    IdnStorageModule
   ]
 })
-export class ServiceModule { }
+export class ServiceModule {
+}
