@@ -25,9 +25,10 @@ export class InputComponent implements OnInit {
     return this.formGroup && this.formGroup.get(this.name).errors && this.formGroup.get(this.name).touched;
   }
 
-  getOneError(): string {
-    if(this.formGroup && this.formGroup.errors && this.formGroup.errors.length){
-      return this.formGroup.errors[0];
+  getOneError(): any {
+    if(this.hasError()){
+      const keys = Object.keys(this.formGroup.get(this.name).errors);
+      return keys[0];
     }
     return '';
   }

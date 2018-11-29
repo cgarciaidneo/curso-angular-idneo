@@ -1,9 +1,9 @@
-<div class="group">
-  <div *ngIf="formGroup; else noControl"  [formGroup]="formGroup">
-      <input [formControlName]="name" [type]="type">
-      <span class="highlight"></span>
-      <span [ngClass]="{'error': hasError()}" class="bar"></span>
-      <span class="hint"> {{ getOneError() }}</span>
+<div class="group" [ngClass]="{'error': hasError()}">
+  <div *ngIf="formGroup; else noControl" [formGroup]="formGroup">
+    <input [formControlName]="name" [type]="type">
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <span class="hint"> {{ getOneError() }}</span>
     <label>{{ label }}</label>
   </div>
   <ng-template #noControl>
@@ -13,6 +13,5 @@
     <span class="hint">HINT</span>
     <label>{{ label }}</label>
   </ng-template>
-
 </div>
 

@@ -1,11 +1,12 @@
 <div class="wrapper">
+  <h2 class="m-16"> Register form </h2>
   <form class="p-16" [formGroup]="form" (ngSubmit)="register()">
     <app-input *ngFor="let field of fields"
                [name]="field.name"
                [label]="field.label"
+               [type]="field.type"
                [formGroup]="form">
     </app-input>
-    <pre>{{ form.errors | json }}</pre>
     <button [disabled]="!form.valid" type="submit">Send</button>
   </form>
 </div>

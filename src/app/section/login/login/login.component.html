@@ -1,3 +1,12 @@
-<p>
-  login works!
-</p>
+<div class="wrapper">
+  <h2 class="m-16"> Login form </h2>
+  <form class="p-16" [formGroup]="form" (ngSubmit)="login()">
+    <app-input *ngFor="let field of fields"
+               [name]="field.name"
+               [label]="field.label"
+               [type]="field.type"
+               [formGroup]="form">
+    </app-input>
+    <button [disabled]="!form.valid" type="submit">Send</button>
+  </form>
+</div>

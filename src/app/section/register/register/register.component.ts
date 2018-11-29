@@ -32,6 +32,7 @@ export class RegisterComponent {
   form: FormGroup = buildFormGroup(this.fields);
 
   register() {
+    console.log(this.fields);
     // this.registerForm.valid
     console.log(this.form.getRawValue())
   }

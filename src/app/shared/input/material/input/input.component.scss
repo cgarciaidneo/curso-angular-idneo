@@ -8,6 +8,22 @@ $width: 100%;
 .group {
   position: relative;
   margin: 32px 0;
+  &.error {
+    input, textarea {
+      border-bottom: 1px solid $error-color !important;
+    }
+
+    .bar {
+      &:before {
+        background: $error-color;
+      }
+    }
+
+    label {
+      color:  $error-color;
+    }
+  }
+
 }
 
 input,
@@ -33,6 +49,7 @@ textarea {
   &:focus ~ .bar:before {
     width: $width;
   }
+
 }
 
 input[type="password"] {
@@ -54,12 +71,6 @@ label {
   position: relative;
   display: block;
   width: $width;
-
-  &.error {
-    &:before {
-      background: $error-color;
-    }
-  }
 
   &:before {
     content: '';
